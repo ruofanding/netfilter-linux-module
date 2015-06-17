@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo rmmod netfilter.ko
+make
+sudo insmod netfilter.ko
+sudo dd if=/dev/null of=/var/log/messages
